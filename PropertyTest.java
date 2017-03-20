@@ -1,4 +1,5 @@
 //.properties文件是Java配置文件
+//java.util.Properties是对properties这类配置文件的映射。支持key-value类型和xml类型两种
 //JDK 内置的java.util.Properties 类为操作.properties 文件提供了便利
 import java.io.*; 
 import java.util.Properties; 
