@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="261.0" prefWidth="336.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MyController">
+   <children>
+      <Button id="myButton" fx:id="myButton" layoutX="34.0" layoutY="55.0" mnemonicParsing="false" onAction="#showDateTime" text="Show Date Time" />
+      <TextField id="myTextField" fx:id="myTextField" layoutX="40.0" layoutY="160.0" prefHeight="74.0" prefWidth="176.0" text="no" />
+   </children>
+</AnchorPane>
