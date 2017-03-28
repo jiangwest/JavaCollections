@@ -9,3 +9,14 @@
 - this example use **World** database, which is a part of MySql Sample Database and along with **Sakila**, as the test database.
   - **city** is a table of **World** database
   
+Table **city** field struct
+
+```sql
+CREATE TABLE city (
+	`ID` INT(11) NOT NULL AUTO_INCREMENT,
+	`Name` CHAR(35) NOT NULL DEFAULT '',
+	`CountryCode` CHAR(3) NOT NULL DEFAULT '',
+	`District` CHAR(20) NOT NULL DEFAULT '',
+	`Population` INT(11) NOT NULL DEFAULT '0'
+)
+```
