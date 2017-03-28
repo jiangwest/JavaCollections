@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+repositories {    // jar package仓库
+    flatDir {    
+        // 先看下build.gradle文件所在目录下的 libs目录中有没有
+        dirs 'libs'
+    }
+    maven {        
+        //如果目录中木有，则找url对应的maven仓库，下面是阿里的maven仓库，速度杠杆的。
+        url "http://maven.aliyun.com/nexus/content/groups/public/"
+    }
+    mavenCentral()    //如果都木有，则取maven官方仓库吧，只是这个速度要看人品
+}
+
+dependencies {    
+    // 所需jar
+    // https://mvnrepository.com/artifact/log4j/log4j
+	compile group: 'log4j', name: 'log4j', version: '1.2.17'    //编译时所需jar
+    testCompile 'junit:junit:4.11'    //编译测试文件所需要的
+}
