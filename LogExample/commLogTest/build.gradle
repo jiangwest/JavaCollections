@@ -1,0 +1,19 @@
+apply plugin: 'java' // 引入java插件，
+
+repositories {    // 从哪里找jar包
+    flatDir {    
+        // 先看下build.gradle文件所在目录下的 libs目录中有没有
+        dirs 'libs'
+    }
+    maven {        
+        //如果目录中木有，则找url对应的maven仓库，下面是阿里的maven仓库，速度杠杆的。
+        url "http://maven.aliyun.com/nexus/content/groups/public/"
+    }
+    mavenCentral()    //如果都木有，则取maven的官方仓库吧，只是这个速度要看人品
+}
+
+dependencies { 
+	compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
+}
+ 
+
