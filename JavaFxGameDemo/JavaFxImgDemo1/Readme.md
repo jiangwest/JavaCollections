@@ -1,5 +1,6 @@
 - aim: how to load image in JavaFx
-
+  - ref to [Introduction to JavaFX for Game Development](https://github.com/tutsplus/Introduction-to-JavaFX-for-Game-Development/blob/master/Example3T.java)
+  
 - for internet image
 
 ```java
