@@ -50,11 +50,11 @@ public class TouchEventsWithPaths extends Application {
         pathTransition.setOrientation(
               PathTransition.OrientationType.ORTHOGONAL_TO_TANGENT);
             
-        // once finished clear path
+        // once finished clear path -> 清除路径
         pathTransition.setOnFinished((actionEvent) -> 
               onePath.getElements().clear());
 
-        // starting initial path
+        // starting initial path 开始创建新路径
         scene.setOnMousePressed((mouseEvent) ->   
            startPath(mouseEvent.getX(), mouseEvent.getY())
         );
@@ -68,6 +68,7 @@ public class TouchEventsWithPaths extends Application {
         // dragging creates lineTos added to the path
         scene.setOnMouseDragged((mouseEvent) -> 
                    drawPath(mouseEvent.getX(), mouseEvent.getY()));
+        //为触摸屏幕添加事件处理                   
         scene.setOnTouchMoved((touchEvent) -> 
                    drawPath(touchEvent.getTouchPoint()
                                   .getX(), 
