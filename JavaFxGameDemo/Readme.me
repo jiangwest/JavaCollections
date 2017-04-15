@@ -1,2 +1,17 @@
 - aim: use JavaFx to for Game design and programming
 
+## `DrawingLines.java`
+
+- aim: how to bind and listern
+
+```java
+// bind the stroke dash offset property
+redLine.strokeDashOffsetProperty().bind(slider.valueProperty());
+```
+
+```java
+// display stroke dash offset value
+slider.valueProperty().addListener((ObservableValue<? extends Number> ov, Number curVal, Number newVal) -> {
+    offsetText.setText("Stroke Dash Offset: " + slider.getValue());
+});
+```
