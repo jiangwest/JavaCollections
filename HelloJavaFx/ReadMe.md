@@ -5,3 +5,42 @@ the keypoint includes three areas
 - 设置controls 的`fx:id`
 - 设置 control 的 `onAction`，即事件处理函数
 - 添加 属性`fx:controller`为UI的控制器
+
+
+## [JavaFX 文本Text](http://docs.oracle.com/javafx/2/text/jfxpub-text.htm)
+
+- javafx.scene.text.Text类 -> 显示文本
+`Text t = new Text (10, 20, "This is a text sample");`
+    - 设置字体和颜色:
+
+```java
+t.setText("This is a text sample");
+t.setFont(Font.font ("Verdana", 20));
+t.setFill(Color.RED);
+```
+
+```java
+// Serif with drop shadow
+Text text2 = new Text(50, 50, "JavaFX 8: Intro. by Example");
+Font serif = Font.font("Serif", 30);
+text2.setFont(serif);
+text2.setFill(Color.RED);
+```
+
+
+
+```java
+List<String> strings = new ArrayList<>();
+for (String string : strings) {
+	System.out.println("Content: " + string);
+}
+```
+
+JAVA 8 `forEach()` -> functional looping style
+
+```java
+List<String> strings = new ArrayList<>();
+strings.stream().forEach((string) -> {
+	System.out.println("Content: " + string);
+});
+```
