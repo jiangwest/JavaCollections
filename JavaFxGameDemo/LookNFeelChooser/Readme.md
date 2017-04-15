@@ -29,3 +29,37 @@ Button button3 = new Button("Accept", new ImageView(imageOk));
 ```
 
 > I'm soory the book *JavaFX 8: Introduction by Example**, its code is not good
+
+## `BackgroundProcesses.java` 
+
+- aim
+  - 进度指示器: ProgressIndicator(饼状图)
+  - JavaFx Task
+  
+  
+```java
+ProgressBar pb = new ProgressBar(0.6);  
+ProgressIndicator pi = new ProgressIndicator(0.6); 
+```
+
+
+### JavaFX Task
+
+JavaFX多线程核心包`javafx.async`，其中有三个类，分别是：
+
+1. `Task`：一个接口类，表示一个工作任务，定义对任务操作方法以及回调
+2. `JavaTaskBase`：实现Task接口，是一个抽象类
+3. `RunnableFuture`：表示一个任务要执行的某个工作
+
+Task启动方法
+
+```java
+Thread th = new Thread(task);
+th.setDeamon(true);
+th.start();
+```
+
+- Task updatet
+  - `updateProgress()`和`updateMessage()` -> 更新Task progress和message属性
+  
+
