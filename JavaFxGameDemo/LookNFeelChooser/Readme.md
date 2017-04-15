@@ -63,3 +63,20 @@ th.start();
   - `updateProgress()`和`updateMessage()` -> 更新Task progress和message属性
   
 
+**Question**: why use `Node` to receive keyboard input? more direct way?
+
+in a example [Getting Started with JavaFX Game Programming](http://www.java-gaming.org/index.php?PHPSESSID=38vkk8nnm3m5g4do2eklsuqbu3&topic=37201.0), I don't understand why author use `Node` to handle `setOnKeyPressed()`:
+
+```java
+// need to attach KeyEvent caller to a Node of some sort.
+// How about an invisible Box? (arbitrary choice)
+final Box keyboardNode = new Box();
+keyboardNode.setFocusTraversable(true);
+keyboardNode.requestFocus();
+
+keyboardNode.setOnKeyPressed(this); // call to the EventHandler
+
+root.getChildren().add(keyboardNode);
+```
+
+Why？
