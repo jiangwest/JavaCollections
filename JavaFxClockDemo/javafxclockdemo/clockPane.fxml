@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" fx:id="clockPane" prefHeight="491.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClockPaneController">
+   <children>
+      <Circle fx:id="cirClock" centerX="400.0" centerY="300.0" fill="#1f93ff03" radius="210.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="10.0" />
+      <Button fx:id="btnQuery" layoutX="28.0" layoutY="109.0" mnemonicParsing="false" onAction="#handleQueryAction" text="Query" />
+      <Button fx:id="btnPause" layoutX="25.0" layoutY="165.0" mnemonicParsing="false" onAction="#handlePauseAction" prefHeight="29.0" prefWidth="71.0" text="Pause" />
+      <Button fx:id="btnExit" layoutX="36.0" layoutY="226.0" mnemonicParsing="false" onAction="#handleExitAction" text="Exit" />
+      <Label layoutX="36.0" layoutY="58.0" text="时间" />
+      <Text fx:id="txtDateTime" layoutX="96.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="136.6513671875" />
+   </children>
+</AnchorPane>
