@@ -1,5 +1,26 @@
 ## How to realize a *Clock* by using JavaFX
 
+- use Scence Build to design FXML
+
+```java
+//load fxml file
+Parent root = FXMLLoader.load(getClass().getResource("*.fxml"));
+```
+
+- use `FXMLController` class to handle GUI input
+
+获取JavaFx Stage
+
+```
+Stage primaryStage = (Stage) 组件.getScene().getWindow();
+```
+- **Q**: 如何让fxml对应controll代码实现关闭当前所控制的fxml页面?
+```
+//
+组件.getScene().getWindow().hide();
+```
+
+
 
 - **Question**: don't understand the difference of *Text* and *TextField*?
 
