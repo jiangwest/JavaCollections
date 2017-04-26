@@ -44,3 +44,40 @@ strings.stream().forEach((string) -> {
 	System.out.println("Content: " + string);
 });
 ```
+
+
+### FXML与Controller
+
+- Q: 如何使得FXML文件与控制器Controller相连接？
+假设一按钮定义: `fx:id = btnLogin`
+则在FXML文件中声明
+```
+@FXML
+Button btnLogin;
+```
+
+按钮与事件关联有两类方法:
+
+```
+@Override
+public void initialize(URL url, ResourceBundle rb) {
+	// TODO  
+	if (btnLogin != null) {
+	    btnLogin.setOnAction((ActionEvent e) -> {
+		System.out.println("Hello World");
+	    });
+	}
+}
+```    
+ 
+ 或者: 在Scence Builder中设置`On action`为下述*函数名*
+ ```
+@FXML  
+protected void handleSubmitButtonAction(ActionEvent event) {  
+	btnLogin.setText("Sign in button pressed");  
+	System.out.println("Hello World");
+} 
+```
+
+
+
