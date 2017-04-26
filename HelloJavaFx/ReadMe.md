@@ -80,4 +80,57 @@ protected void handleSubmitButtonAction(ActionEvent event) {
 ```
 
 
+## Java事件机制
+
+
+```
+[object].setOnXXX(new EventHandler<[Event_TYPE]>() {
+  @Override public void handle([Event_TYPE] e) {
+    ...
+  }
+});
+```
+
+Example:
+
+```
+Button button = new Button();
+ 
+button.setOnAction(new EventHandler() {
+  @Override public void handle(ActionEvent e) {
+    ...
+  }
+});
+```
+
+以按鈕的鼠标移动事件为例，其方法为`setOnMouseMoved()`,事件为`MouseEvent`：
+
+```java
+Button button = new Button();
+ 
+button.setOnMouseMoved(new EventHandler() {
+  @Override public void handle(MouseEvent e) {
+    ...
+  }
+});
+```
+
+- 属性绑定
+
+```java
+XXX.xxxxProperty().addListener
+```
+
+Example: 监听CheckBox的选中事件
+
+```java
+CheckBox cb = new CheckBox("CheckBox");  
+cb.selectedProperty().addListener(new ChangeListener<Boolean>() {  
+	@Override  
+	public void changed(ObservableValue<? extends Boolean> ov, Boolean t, Boolean t1) {  
+	   System.out.println("CheckBox:  " + " old value--" + t.toString() + "     new value--" + t1.toString());  
+	}  
+});  
+```  
+
 
