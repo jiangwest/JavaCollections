@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication13.tableviewCargoController">
+   <children>
+      <TableView fx:id="tableviewCargo" layoutX="118.0" layoutY="68.0" prefHeight="200.0" prefWidth="261.0">
+        <columns>
+          <TableColumn fx:id="colCargoName" minWidth="100.0" prefWidth="75.0" text="商品名称" />
+          <TableColumn fx:id="colCargoPrice" minWidth="100.0" prefWidth="75.0" text="价格" />
+        </columns>
+      </TableView>
+      <Label layoutX="194.0" layoutY="23.0" text="Commodity List" />
+      <Label layoutX="78.0" layoutY="336.0" text="select commodity:" textAlignment="CENTER" textFill="#f20909" />
+      <Text fx:id="txtSelectCommodity" layoutX="236.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="235.6513671875" />
+      <Text fx:id="txtSelectIndex" layoutX="225.0" layoutY="322.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="133.00000727176666" />
+      <Label layoutX="88.0" layoutY="307.0" text="select index" />
+   </children>
+</AnchorPane>
